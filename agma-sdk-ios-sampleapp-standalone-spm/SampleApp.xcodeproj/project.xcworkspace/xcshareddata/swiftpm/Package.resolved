@@ -1,0 +1,15 @@
+{
+  "originHash" : "9b033c0eac8fcda9c4f723f883046ab458f2b480c169c2ce4c605993d34b5c37",
+  "pins" : [
+    {
+      "identity" : "agma-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/agma-dna/agma-sdk-ios.git",
+      "state" : {
+        "revision" : "aa49fb5ec8ffc98ece813c3413ba65faf7cef4a7",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

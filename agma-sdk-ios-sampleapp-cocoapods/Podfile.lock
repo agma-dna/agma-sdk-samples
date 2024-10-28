@@ -1,0 +1,31 @@
+PODS:
+  - AgmaSdkIos (1.0.0)
+  - PrebidMobile (2.3.0):
+    - PrebidMobile/core (= 2.3.0)
+  - PrebidMobile/core (2.3.0)
+
+DEPENDENCIES:
+  - AgmaSdkIos (from `https://github.com/agma-dna/agma-sdk-ios.git`, tag `1.0.0`)
+  - PrebidMobile
+
+SPEC REPOS:
+  trunk:
+    - PrebidMobile
+
+EXTERNAL SOURCES:
+  AgmaSdkIos:
+    :git: https://github.com/agma-dna/agma-sdk-ios.git
+    :tag: 1.0.0
+
+CHECKOUT OPTIONS:
+  AgmaSdkIos:
+    :git: https://github.com/agma-dna/agma-sdk-ios.git
+    :tag: 1.0.0
+
+SPEC CHECKSUMS:
+  AgmaSdkIos: 888cdccb5715c21103d1ede869c1e917b36a7680
+  PrebidMobile: 459a3a26eea63b7b4687dcadf928514050e26b31
+
+PODFILE CHECKSUM: deff1da251d29d131e65bffde30b4f6c58305f85
+
+COCOAPODS: 1.15.2
