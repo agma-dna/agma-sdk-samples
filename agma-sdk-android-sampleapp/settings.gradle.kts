@@ -16,7 +16,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://maven.bearologics.dev/releases") }
+        maven { url = uri("https://maven.agma-analytics.de") }
 
     }
 }
