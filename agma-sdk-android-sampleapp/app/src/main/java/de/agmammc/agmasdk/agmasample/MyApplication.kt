@@ -16,9 +16,4 @@ class MyApplication : Application() {
             )
         )
     }
-
-    override fun onTerminate() {
-        super.onTerminate()
-        AgmaSdk.getInstance(this).onTerminate()
-    }
 }

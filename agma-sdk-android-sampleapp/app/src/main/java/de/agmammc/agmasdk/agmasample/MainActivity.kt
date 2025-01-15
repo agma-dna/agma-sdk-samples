@@ -62,4 +62,9 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    override fun onPause() {
+        super.onPause()
+        AgmaSdk.getInstance(this).onPause()
+    }
 }
