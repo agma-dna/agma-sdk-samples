@@ -17,6 +17,7 @@ struct SampleAppApp: App {
         WindowGroup {
             Button(action: {
                 AgmaSdk.shared.triggerEvent()
+                AgmaSdk.shared.setId5Config(AgmaSdk.Id5Config(partner: 1437, hem: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08", phone: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08", domain: nil))
             }, label: { Text("Trigger Manual Event") })
         }
     }

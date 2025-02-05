@@ -13,9 +13,10 @@ fileprivate let nativeStoredImpression = "prebid-demo-banner-native-styles"
 
 @main
 struct SampleAppApp: App {
-
+    let eventDelegate = EventDelegate()
+    
     init() {
-        AgmaSdk.shared.setConfig(AgmaSdk.Config(code: "provided-by-agma-please-change"))
+        AgmaSdk.shared.setConfig(AgmaSdk.Config(code: "provided-by-agma-please-change", loggingEnabled: true))
         
 #warning("!! FOR AGMA SDK TESTING PURPOSE ONLY !!")
         AgmaSdk.shared.setConsentString("CPyFwIAPyFwIACnABIDEDVCkAP_AAAAAAAYgJmJV9D7dbXFDcXx3SPt0OYwW1dBTKuQhAhSAA2AFVAOQ8JQA02EaMATAhiACEQIAolYBAAEEHAFUAEGQQIAEAAHsIgSEhAAKIABEEBEQAAIQAAoKAIAAEAAIgAABIgSAmBiQSdLkRUCAGIAwDgBYAqgBCIABAgMBBEAIABAIAIIIwygAAQBAAIIAAAAAARAAAgAAAAAAIAAAAABAAAASEgAwABBMwNABgACCZgiADAAEEzBUAGAAIJmDIAMAAQTMHQAYAAgmYQgAwABBMwlABgACCZhSADAAEEzA.f_gAAAAABcgAAAAA")
@@ -27,6 +28,7 @@ struct SampleAppApp: App {
         
         Prebid.shared.prebidServerAccountId = "0689a263-318d-448b-a3d4-b02e8a709d9d"
         try! Prebid.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
+        Prebid.shared.eventDelegate = eventDelegate
     }
     
     var body: some Scene {
@@ -64,8 +66,6 @@ struct SampleAppApp: App {
         nativeUnit.eventtrackers = [NativeEventTracker(event: EventType.Impression, methods: [EventTracking.Image,EventTracking.js])]
 
         // 4. Make a bid request to Prebid Server
-        nativeUnit.fetchDemand(completion: { result, kvResultDict in
-            AgmaSdk.shared.triggerEvent()
-        })
+        nativeUnit.fetchDemand { _ in }
     }
 }
