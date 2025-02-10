@@ -18,6 +18,17 @@ struct SampleAppApp: App {
     init() {
         AgmaSdk.shared.setConfig(AgmaSdk.Config(code: "provided-by-agma-please-change", loggingEnabled: true))
         
+        // ID5 Configuration
+        AgmaSdk.shared.setId5Config(
+            .init(
+                appConfig: try! .fromBundle(),
+                partner: 1234,
+                domain: "example.com",
+                hem: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+                phone: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+            )
+        )
+        
 #warning("!! FOR AGMA SDK TESTING PURPOSE ONLY !!")
         AgmaSdk.shared.setConsentString("CPyFwIAPyFwIACnABIDEDVCkAP_AAAAAAAYgJmJV9D7dbXFDcXx3SPt0OYwW1dBTKuQhAhSAA2AFVAOQ8JQA02EaMATAhiACEQIAolYBAAEEHAFUAEGQQIAEAAHsIgSEhAAKIABEEBEQAAIQAAoKAIAAEAAIgAABIgSAmBiQSdLkRUCAGIAwDgBYAqgBCIABAgMBBEAIABAIAIIIwygAAQBAAIIAAAAAARAAAgAAAAAAIAAAAABAAAASEgAwABBMwNABgACCZgiADAAEEzBUAGAAIJmDIAMAAQTMHQAYAAgmYQgAwABBMwlABgACCZhSADAAEEzA.f_gAAAAABcgAAAAA")
         
@@ -64,7 +75,8 @@ struct SampleAppApp: App {
         nativeUnit.placementType = PlacementType.FeedContent
         nativeUnit.contextSubType = ContextSubType.Social
         nativeUnit.eventtrackers = [NativeEventTracker(event: EventType.Impression, methods: [EventTracking.Image,EventTracking.js])]
-
+        nativeUnit.addUserData([.init(jsonDictionary: ["id": "123"])!]) // Add user data
+        
         // 4. Make a bid request to Prebid Server
         nativeUnit.fetchDemand { _ in }
     }
