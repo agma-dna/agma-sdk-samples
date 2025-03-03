@@ -1,5 +1,5 @@
 PODS:
-  - AgmaSdkIos (1.1.0)
+  - AgmaSdkIos (1.1.1)
   - PrebidMobile (2.4.0):
     - PrebidMobile/core (= 2.4.0)
   - PrebidMobile/core (2.4.0)
@@ -23,7 +23,7 @@ CHECKOUT OPTIONS:
     :tag: 1.1.1
 
 SPEC CHECKSUMS:
-  AgmaSdkIos: 701130f6dba97d16720f0a75d45bcc6f1c4578a1
+  AgmaSdkIos: 6f41db1301c83aadd375a2bcb9845058665e5cc0
   PrebidMobile: cad263381f04c99e7be8311155cf32a707afe442
 
 PODFILE CHECKSUM: 0165dcfe12f676630b9427fee52669eff08c0584

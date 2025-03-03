@@ -6,7 +6,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/agma-dna/agma-sdk-ios.git",
       "state" : {
-        "revision" : "3502b8079d01900097ede8f1c950d7bc359fe41f",
+        "revision" : "2b28ba00b3ed8ed98321a62059367fc58c185066",
         "version" : "1.1.1"
       }
     }
