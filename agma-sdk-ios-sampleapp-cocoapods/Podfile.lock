@@ -1,11 +1,11 @@
 PODS:
-  - AgmaSdkIos (1.1.1)
+  - AgmaSdkIos (1.2.0)
   - PrebidMobile (2.4.0):
     - PrebidMobile/core (= 2.4.0)
   - PrebidMobile/core (2.4.0)
 
 DEPENDENCIES:
-  - AgmaSdkIos (from `https://github.com/agma-dna/agma-sdk-ios.git`, tag `1.1.1`)
+  - AgmaSdkIos (from `https://github.com/agma-dna/agma-sdk-ios.git`, tag `1.2.0`)
   - PrebidMobile (~> 2.4.0)
 
 SPEC REPOS:
@@ -15,17 +15,17 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   AgmaSdkIos:
     :git: https://github.com/agma-dna/agma-sdk-ios.git
-    :tag: 1.1.1
+    :tag: 1.2.0
 
 CHECKOUT OPTIONS:
   AgmaSdkIos:
     :git: https://github.com/agma-dna/agma-sdk-ios.git
-    :tag: 1.1.1
+    :tag: 1.2.0
 
 SPEC CHECKSUMS:
-  AgmaSdkIos: 6f41db1301c83aadd375a2bcb9845058665e5cc0
+  AgmaSdkIos: cf48d28875c271c16e9a4e4244fbd2048b08d88f
   PrebidMobile: cad263381f04c99e7be8311155cf32a707afe442
 
-PODFILE CHECKSUM: 0165dcfe12f676630b9427fee52669eff08c0584
+PODFILE CHECKSUM: 244831fcfcef0236379e8d38bc7cc758bb0ce700
 
 COCOAPODS: 1.15.2

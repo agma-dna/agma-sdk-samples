@@ -10,6 +10,7 @@
 		2A109D422C9C76B700C3AF15 /* SampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A109D412C9C76B700C3AF15 /* SampleAppApp.swift */; };
 		2A109D462C9C76B800C3AF15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A109D452C9C76B800C3AF15 /* Assets.xcassets */; };
 		2A109D492C9C76B800C3AF15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A109D482C9C76B800C3AF15 /* Preview Assets.xcassets */; };
+		2A4D1A312D82F0D6000DE313 /* AgmaSdkIos in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4D1A302D82F0D6000DE313 /* AgmaSdkIos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4D1A312D82F0D6000DE313 /* AgmaSdkIos in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,7 @@
 			);
 			name = SampleApp;
 			packageProductDependencies = (
+				2A4D1A302D82F0D6000DE313 /* AgmaSdkIos */,
 			);
 			productName = SampleApp;
 			productReference = 2A109D3E2C9C76B700C3AF15 /* SampleApp.app */;
@@ -360,10 +363,18 @@
 			repositoryURL = "https://github.com/agma-dna/agma-sdk-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.1;
+				minimumVersion = 1.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A4D1A302D82F0D6000DE313 /* AgmaSdkIos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A18242A2D759618005744D9 /* XCRemoteSwiftPackageReference "agma-sdk-ios" */;
+			productName = AgmaSdkIos;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A109D362C9C76B700C3AF15 /* Project object */;
 }
