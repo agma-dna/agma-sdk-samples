@@ -19,6 +19,7 @@ struct SampleAppApp: App {
         AgmaSdk.shared.setConfig(AgmaSdk.Config(code: "provided-by-agma-please-change", loggingEnabled: true))
         
         // ID5 Configuration
+#warning("!! FOR AGMA SDK TESTING PURPOSE ONLY !!")
         AgmaSdk.shared.setId5Config(
             .init(
                 appConfig: try! .fromBundle(),
@@ -39,7 +40,13 @@ struct SampleAppApp: App {
         
         Prebid.shared.prebidServerAccountId = "0689a263-318d-448b-a3d4-b02e8a709d9d"
         try! Prebid.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
+#warning("!! FOR AGMA SDK TESTING PURPOSE ONLY !!")
+        let netid = UserUniqueID(id: "sample-netid", aType: 1)
+        let userIds = ExternalUserId(source: "netid.de", uids: [netid])
+        Targeting.shared.setExternalUserIds([userIds])
+
         Prebid.shared.eventDelegate = eventDelegate
+
     }
     
     var body: some Scene {
