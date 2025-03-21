@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.prebid.mobile.sdk)
     implementation(libs.agmasdk)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
