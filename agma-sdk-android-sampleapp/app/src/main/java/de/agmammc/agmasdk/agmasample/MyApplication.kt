@@ -25,10 +25,10 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
     override fun onCreate() {
         super.onCreate()
         initPrebidSDK()
-        // initAgmaWithPrebidSDK()
+        initAgmaWithPrebidSDK()
 
         // if you do not use prebid, you can init the SDK with a static app object
-        initAgmaWithoutPrebidSDK()
+        // initAgmaWithoutPrebidSDK()
 
         // optional, if you have an ID5 partner ID
         initAgmaID5()
