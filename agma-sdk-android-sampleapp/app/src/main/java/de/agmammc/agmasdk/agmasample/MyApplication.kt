@@ -56,7 +56,7 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
     }
 
     private fun initAgmaWithPrebidSDK() {
-        AgmaSdk.getInstance(this).setConfig(
+        AgmaSdk.getInstance(applicationContext).setConfig(
             AgmaSdk.Config(
                 serverUrl = URI("https://near-bet-rebel-atom.trycloudflare.com"),
                 code = "provided-by-agma-please-change",
@@ -70,8 +70,8 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
     // Optional: Include YOUR ID5 Config
     private fun initAgmaID5() {
         // If you use ID5, you need to manual set the consent string
-        AgmaSdk.getInstance(this).setConsentString(consentString)
-        AgmaSdk.getInstance(this).setId5Config(
+        AgmaSdk.getInstance(applicationContext).setConsentString(consentString)
+        AgmaSdk.getInstance(applicationContext).setId5Config(
             AgmaSdk.Id5Config(
                 AgmaSdk.Id5Config.AppConfig(
                     "com.agmammc.agmasdk.android.testapp",
@@ -87,7 +87,7 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
     }
 
     private fun initAgmaWithoutPrebidSDK() {
-        AgmaSdk.getInstance(this).setConfig(
+        AgmaSdk.getInstance(applicationContext).setConfig(
             AgmaSdk.Config(
                 code = "provided-by-agma-please-change",
                 flushThreshold = 3, // set according to how often you refresh your ads to get a good batching balance, default is 15
@@ -115,7 +115,7 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
             )
         )
         // If you do not use prebid you need to manual set your consent string
-        AgmaSdk.getInstance(this).setConsentString(consentString)
+        AgmaSdk.getInstance(applicationContext).setConsentString(consentString)
 
     }
 

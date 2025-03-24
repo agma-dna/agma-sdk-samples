@@ -26,8 +26,8 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-prebid-mobile-sdk = { group = "de.agmammc", name = "agmasdk", version.ref = "agmaSdk" }
-agmasdk = { group = "org.prebid", name = "prebid-mobile-sdk", version.ref = "prebidMobileSdk" }
+agmasdk = { group = "de.agmammc", name = "agmasdk", version.ref = "agmaSdk" }
+prebid-mobile-sdk = { group = "org.prebid", name = "prebid-mobile-sdk", version.ref = "prebidMobileSdk" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

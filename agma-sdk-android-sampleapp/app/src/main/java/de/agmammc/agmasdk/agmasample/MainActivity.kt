@@ -19,8 +19,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
+        
         enableEdgeToEdge()
         setContent {
             AgmaSampleTheme {
@@ -82,7 +81,7 @@ class MainActivity : ComponentActivity() {
         super.onPause()
 
         // Set on Pause
-        AgmaSdk.getInstance(this).onPause()
+        AgmaSdk.getInstance(applicationContext).onPause()
     }
 
     override fun onDestroy() {
