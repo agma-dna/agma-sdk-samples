@@ -8,7 +8,8 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
 composeBom = "2024.04.01"
-agmaSdk = "1.2.0.rc1"
+agmaSdk = "1.2.1"
+prebidMobileSdk = "2.5.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,6 +27,7 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 agmasdk = { group = "de.agmammc", name = "agmasdk", version.ref = "agmaSdk" }
+prebid-mobile-sdk = { group = "org.prebid", name = "prebid-mobile-sdk", version.ref = "prebidMobileSdk" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
