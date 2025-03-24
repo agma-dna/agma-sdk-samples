@@ -84,4 +84,11 @@ class MainActivity : ComponentActivity() {
         // Set on Pause
         AgmaSdk.getInstance(this).onPause()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        // Set on Destroy
+        AgmaSdk.getInstance(this).onDestroy()
+    }
 }

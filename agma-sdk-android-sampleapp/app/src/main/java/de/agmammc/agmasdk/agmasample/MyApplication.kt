@@ -58,6 +58,7 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
     private fun initAgmaWithPrebidSDK() {
         AgmaSdk.getInstance(this).setConfig(
             AgmaSdk.Config(
+                serverUrl = URI("https://near-bet-rebel-atom.trycloudflare.com"),
                 code = "provided-by-agma-please-change",
                 flushThreshold = 3, // set according to how often you refresh your ads to get a good batching balance, default is 15
                 loggingEnabled = true, // good for debugging
@@ -101,7 +102,7 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
                     bundle = "com.agmammc.agmasdk.android.testapp",
                     domain = "myapp.com",
                     storeUrl = "http://store-url",
-                    cat = null,
+                    cat = listOf("12"), // set App Taxonomie, eg. 12=News https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Content%20Taxonomy%201.0.tsv
                     sectionCat = null,
                     pageCat = null,
                     ver = "1.1.0",
