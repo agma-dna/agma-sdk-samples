@@ -58,7 +58,6 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
     private fun initAgmaWithPrebidSDK() {
         AgmaSdk.getInstance(applicationContext).setConfig(
             AgmaSdk.Config(
-                serverUrl = URI("https://near-bet-rebel-atom.trycloudflare.com"),
                 code = "provided-by-agma-please-change",
                 flushThreshold = 3, // set according to how often you refresh your ads to get a good batching balance, default is 15
                 loggingEnabled = true, // good for debugging
