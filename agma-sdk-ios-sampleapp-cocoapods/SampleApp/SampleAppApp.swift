@@ -16,7 +16,7 @@ struct SampleAppApp: App {
     let eventDelegate = EventDelegate()
     
     init() {
-        AgmaSdk.shared.setConfig(AgmaSdk.Config(code: "provided-by-agma-please-change", loggingEnabled: true))
+        AgmaSdk.shared.setConfig(AgmaSdk.Config(code: "provided-by-agma-please-change", serverUrl: URL(string: "http://localhost:3000"), loggingEnabled: true))
         
         // ID5 Configuration
         AgmaSdk.shared.setId5Config(
@@ -40,6 +40,9 @@ struct SampleAppApp: App {
         Prebid.shared.prebidServerAccountId = "0689a263-318d-448b-a3d4-b02e8a709d9d"
         try! Prebid.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
         Prebid.shared.eventDelegate = eventDelegate
+
+        // make sure you enable SharedId
+        Targeting.shared.sendSharedId = true
     }
     
     var body: some Scene {
