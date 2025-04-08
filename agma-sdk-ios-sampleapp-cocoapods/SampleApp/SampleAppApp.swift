@@ -16,7 +16,7 @@ struct SampleAppApp: App {
     let eventDelegate = EventDelegate()
     
     init() {
-        AgmaSdk.shared.setConfig(AgmaSdk.Config(code: "provided-by-agma-please-change", serverUrl: URL(string: "http://localhost:3000"), loggingEnabled: true))
+        AgmaSdk.shared.setConfig(AgmaSdk.Config(code: "provided-by-agma-please-change", loggingEnabled: true))
         
         // ID5 Configuration
         AgmaSdk.shared.setId5Config(
