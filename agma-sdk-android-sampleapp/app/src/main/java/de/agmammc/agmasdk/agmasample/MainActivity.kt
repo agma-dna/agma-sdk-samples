@@ -74,20 +74,7 @@ class MainActivity : ComponentActivity() {
         // triggerEvent can set user / app on a per Event basis
         // You are allowed to trigger this whenever the app potentially refreshes its ads.
         // see docs for more info
-        AgmaSdk.getInstance(applicationContext).triggerEvent()
+        AgmaSdk.getInstance().triggerEvent()
     }
 
-    override fun onPause() {
-        super.onPause()
-
-        // Set on Pause
-        AgmaSdk.getInstance(applicationContext).onPause()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        // Set on Destroy
-        AgmaSdk.getInstance(this).onDestroy()
-    }
 }
