@@ -8,4 +8,15 @@ target 'SampleApp' do
   # Pods for SampleApp
   pod 'AgmaSdkIos', :git => 'https://github.com/agma-dna/agma-sdk-ios.git', :tag => '2.0.0'
   pod 'PrebidMobile', '~> 2.5.0'
+
+end
+
+post_install do |installer|
+  installer.aggregate_targets.each do |target|
+    target.xcconfigs.each do |config_name, config|
+      config.attributes['SWIFT_INCLUDE_PATHS'] = '$(PODS_XCFRAMEWORKS_BUILD_DIR)/AgmaSdkIos'
+      xcconfig_path = target.xcconfig_path(config_name)
+      config.save_as(xcconfig_path)
+    end
+  end
 end
