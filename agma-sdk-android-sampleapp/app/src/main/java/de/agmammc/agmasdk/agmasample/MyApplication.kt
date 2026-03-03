@@ -97,6 +97,7 @@ class MyApplication : Application(), PrebidEventDelegate, Id5ResponseListener {
                     1234, // Please only use this with your own partner id
                     "com.example",
                 ),
+                // This should match your Prebid Ortb2 App Config
                 app = App(
                     id = "app-defined-unique-id",
                     name = "My App Name",

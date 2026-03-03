@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import de.agmammc.agmasdk.agmasample.ui.theme.AgmaSampleTheme
 import de.agmammc.agmasdk.android.AgmaSdk
+import de.agmammc.agmasdk.android.ortb2.User
 import org.prebid.mobile.BannerAdUnit
 
 class MainActivity : ComponentActivity() {
@@ -74,7 +75,34 @@ class MainActivity : ComponentActivity() {
         // triggerEvent can set user / app on a per Event basis
         // You are allowed to trigger this whenever the app potentially refreshes its ads.
         // see docs for more info
-        AgmaSdk.getInstance().triggerEvent()
+
+        // optional: when you use sharedId for prebid
+        val sharedId = "E4D65283-171B-4559-89F1-9C70EF8F1476"
+
+        val user = User(
+            ext = mapOf( // optional: when you use prebid sharedId for verification and also trigger ad rotations without prebid
+                "eids" to listOf(
+                    mapOf(
+                        "source" to "pubcid.org",
+                        "uids" to listOf(
+                            mapOf(
+                                "id" to sharedId,
+                                "atype" to 1
+                            )
+                        )
+                    )
+                )
+            ),
+            id = null,
+            buyerUid = null,
+            yob = null,
+            gender = null,
+            keywords = null,
+            customData = null,
+        )
+
+
+        AgmaSdk.getInstance().triggerEvent(user = user)
     }
 
 }
